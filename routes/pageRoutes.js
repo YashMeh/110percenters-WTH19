@@ -2,7 +2,7 @@ const express=require("express")
 const router=express.Router();
 
 router.get("/",(req,res)=>{
-    res.send("Working ");
+    res.sendFile("home.html",{root:__dirname+"/../views"})
 })
 
 module.exports=router;
