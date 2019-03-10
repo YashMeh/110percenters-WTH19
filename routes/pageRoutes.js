@@ -1,8 +1,9 @@
 const express=require("express")
 const router=express.Router();
-
-router.get("/",(req,res)=>{
-    res.sendFile("home.html",{root:__dirname+"/../views"})
+const verifyJWT=require("./verifyTokens");
+router.get("/",verifyJWT,(req,res)=>{
+    res.send("Hello")
 })
+
 
 module.exports=router;
