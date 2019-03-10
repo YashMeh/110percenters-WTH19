@@ -1,0 +1,54 @@
+    body{
+        background-color: #f8f8f8;
+        margin: 0;
+    }
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: -10;
+        width: 100%;
+        
+      }
+      .heading{
+        font-family: 'Barlow', sans-serif;
+        margin: 50px auto;
+      }
+      .form-control{
+        border: none; 
+        font-family: 'Barlow', sans-serif;
+        width: 320px;
+        margin: 40px auto;
+      }
+      #btn{
+        background-color:#B62525;
+        color:white;
+        border: none;
+        font-size: 20px;
+        margin: 40px auto;
+        font-family: 'Barlow', sans-serif;
+        width: 320px
+      }
+      .para{
+        font-family: 'Barlow', sans-serif;
+        font-size: 20px;
+      }
+      #btn-circle{
+        background-color:#B62525;
+        border-radius:50%;
+        color:white;
+        border: none;
+        font-size: 20px;
+        margin: 30px auto;
+        font-family: 'Barlow', sans-serif;
+        width: 100px;
+        height: 100px;
+      }
+      #btn-call{
+        background-color:#B62525;
+        border-radius:50%;
+        color:white;
+        border: none;
+        font-family: 'Barlow', sans-serif;
+        width: 40px;
+        height: 40px;
+      }
