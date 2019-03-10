@@ -8,14 +8,15 @@ router.post("/register",function(req,res){
     User.create({
         name:req.body.name,
         email:req.body.email,
-        password:hashedPass
+        password:hashedPass,
+        phoneNum:req.body.phnum
     },function(err,user){
         if(err)
         res.send("There was a problem registering the user").status(500);
         var token = jwt.sign({ id: user._id }, process.env.secretKey, {
             expiresIn: 86400 // expires in 24 hours
           });
-          res.status(200).send({ auth: true, token: token });
+          res.status(200).send({ auth: true, token: token,user:user });
 
     })
 })
@@ -28,10 +29,10 @@ router.post('/login', function(req, res) {
       var token = jwt.sign({ id: user._id }, process.env.secretKey, {
         expiresIn: 86400 // expires in 24 hours
       });
-      res.status(200).send({ auth: true, token: token });
+      res.status(200).send({ auth: true, token: token,user:user });
     });
   });
   router.get('/logout', function(req, res) {
-    res.status(200).send({ auth: false, token: null });
+    res.status(200).send({ auth: false, token: null,user:null });
   });  
 module.exports=router

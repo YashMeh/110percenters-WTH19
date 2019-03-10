@@ -6,7 +6,23 @@ const bodyParser=require("body-parser");
 const port=process.env.PORT || 3000;
 const io = require('socket.io')(server);
 const dotenv=require("dotenv");
+const User=require("./models/user")
 dotenv.config();
+
+//Creating namespaces
+var activation=io.of('/activation');
+
+//Namespace Methods
+var handleActivation=(socket)=>{
+    socket.on("assignID",(data)=>{
+        var userID=data.id;
+        var location=data.location;
+        User.findOneAndUpdate({id:userID},{$set:{active:true,location:location}},{new:true}).then((updatedUser)=>{
+            console.log(updatedUser);
+        })
+
+    })
+}
 
 //Database configuration
 const URI=process.env.URI || "mongodb://localhost/wth19";
@@ -33,7 +49,8 @@ const pageroutes=require("./routes/pageRoutes")
 app.use("/api",useroutes)
 app.use("/",pageroutes)
 
-
+//Defining namespace methods
+activation.on("connection",handleActivation);
 //Starting the server
 app.listen(port,(err)=>{
     if(err)

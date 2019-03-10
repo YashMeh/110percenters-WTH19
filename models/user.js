@@ -6,7 +6,11 @@ var userSchema=new mongoose.Schema({
     phoneNum:Number,
     location:Array,
     password:String,
-    people:Array
+    people:Array,
+    active:{
+        type:Boolean,
+        default:false
+    }
 })
 
 module.exports=mongoose.model("user",userSchema);

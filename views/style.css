@@ -1,4 +1,4 @@
-    body{
+body{
         background-color: #f8f8f8;
         margin: 0;
     }
@@ -13,20 +13,24 @@
         font-family: 'Barlow', sans-serif;
         margin: 50px auto;
       }
+      .heading1{
+        font-family: 'Barlow', sans-serif;
+        margin: 30px auto;
+      }
       .form-control{
         border: none; 
         font-family: 'Barlow', sans-serif;
         width: 320px;
-        margin: 40px auto;
+        margin: 10px auto;
       }
       #btn{
         background-color:#B62525;
         color:white;
         border: none;
         font-size: 20px;
-        margin: 40px auto;
+        margin: 20px auto;
         font-family: 'Barlow', sans-serif;
-        width: 320px
+        width: 320px;
       }
       .para{
         font-family: 'Barlow', sans-serif;
@@ -52,3 +56,65 @@
         width: 40px;
         height: 40px;
       }
+@media screen and (max-width: 450px) {
+    body{
+        background-color: #f8f8f8;
+        margin: 0;
+    }
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        
+      }
+      .heading{
+        font-family: 'Barlow', sans-serif;
+        margin: 30px auto;
+        width: 100%;
+      }
+      .heading1{
+        font-family: 'Barlow', sans-serif;
+        margin: 20px auto;
+      }
+      .form-control{
+        border: none; 
+        font-family: 'Barlow', sans-serif;
+        width: 100%;
+        margin: 5px auto;
+      }
+      #btn{
+        background-color:#B62525;
+        color:white;
+        border: none;
+        font-size: 20px;
+        margin: 15px auto;
+        font-family: 'Barlow', sans-serif;
+        width: 100%;
+      }
+      .para{
+        font-family: 'Barlow', sans-serif;
+        font-size: 20px;
+        width: 100%;
+      }
+      #btn-circle{
+        background-color:#B62525;
+        border-radius:50%;
+        color:white;
+        border: none;
+        font-size: 20px;
+        margin: 30px auto;
+        font-family: 'Barlow', sans-serif;
+        width: 100px;
+        height: 100px;
+      }
+      #btn-call{
+        background-color:#B62525;
+        border-radius:50%;
+        color:white;
+        border: none;
+        font-family: 'Barlow', sans-serif;
+        width: 40px;
+        height: 40px;
+      }
+    }
