@@ -27,10 +27,12 @@ app.use(function(req, res, next) {
 app.use(express.static(__dirname+'/views'));  
 
 //Requiring Routes
-const apiroutes=require("./routes/apiRoutes")
-
+const useroutes=require("./routes/userRoutes")
+const pageroutes=require("./routes/pageRoutes")
 //Using Routes
-app.use("/api",apiroutes)
+app.use("/api",useroutes)
+app.use("/",pageroutes)
+
 
 //Starting the server
 app.listen(port,(err)=>{
